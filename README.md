@@ -33,7 +33,7 @@
 
 ![image](https://user-images.githubusercontent.com/73624088/225265847-f24406f9-ef58-4990-88dc-c9d0ba52705e.png)
 
-支持全局搜索
+支持全局搜索（Ctrl+F）
 
 ![image](https://user-images.githubusercontent.com/73624088/225266292-50c16732-48f5-4962-8233-56a334071589.png)
 
