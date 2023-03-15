@@ -37,3 +37,8 @@
 
 ![image](https://user-images.githubusercontent.com/73624088/225266292-50c16732-48f5-4962-8233-56a334071589.png)
 
+支持如下语言
+
+![image](https://user-images.githubusercontent.com/73624088/225267641-91bd956f-8819-4e71-9395-4d0e134be6b8.png)
+
+
