@@ -5,25 +5,27 @@
 
   
 <Application.Resources>
-   <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <materialDesign:BundledTheme
-                    BaseTheme="Light"
-                    PrimaryColor="Blue"
-                    SecondaryColor="Lime" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
-                <!--  Other merged dictionaries here  -->
-                <ResourceDictionary Source="pack://application:,,,/FilterDataGrid;component/Themes/Generic.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-            <!--  Other app resources here  -->
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <materialDesign:BundledTheme
+                BaseTheme="Dark"
+                PrimaryColor="Red"
+                SecondaryColor="Lime" />
+            <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            <ResourceDictionary Source="pack://application:,,,/FilterDataGrid;component/Themes/Generic.xaml" />
+        </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
 </Application.Resources>
    
    
  <Window . . .
-       xmlns:FD="clr-namespace:FilterDataGrid;assembly=FilterDataGrid"
+       xmlns:filterDG="clr-namespace:FilterDataGrid;assembly=FilterDataGrid"
     <Grid>
  
     </Grid>
 </Window>
+
+1、显示行号
+![image](https://github.com/ChelyLuu/FilterDataGrid/assets/73624088/c1194c2d-0435-4d5f-bd9f-940e0eff353f)
+
 
