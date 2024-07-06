@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="FPrimaryLightColor" Color="#9A67EA" />
+    <SolidColorBrush x:Key="FPrimaryLightForeColor" Color="#151515" />
+    <SolidColorBrush x:Key="FPrimaryColor" Color="#673AB7" />
+    <SolidColorBrush x:Key="FPrimaryForeColor" Color="#FAFAFA" />
+    <SolidColorBrush x:Key="FPrimaryDarkColor" Color="#320B86" />
+    <SolidColorBrush x:Key="FPrimaryDarkForeColor" Color="#FAFAFA" />
+
+    <SolidColorBrush x:Key="FBackground" Color="#303030" />
+    <SolidColorBrush x:Key="FForeground" Color="#E1E1E1" />
+    <SolidColorBrush x:Key="FLightForeground" Color="#E0DDDD" />
+    <SolidColorBrush x:Key="FBorderColor" Color="#292929" />
+    <SolidColorBrush x:Key="FSelectedColor" Color="#454547" />
+    <SolidColorBrush x:Key="FMouseOverColor" Color="#4C4C4D" />
+    <SolidColorBrush x:Key="FDisabledColor" Color="#647076" />
+    <SolidColorBrush x:Key="FDoubleRowColor" Color="#393838" />
+    <SolidColorBrush x:Key="FMaskColor" Color="#D21E1E20" />
+    <SolidColorBrush x:Key="FCardColor" Color="#181818" />
+</ResourceDictionary>

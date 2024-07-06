@@ -1,0 +1,124 @@
+﻿<Window
+    x:Class="FilterDataGridDome.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cos="clr-namespace:FilterDataGrid;assembly=FilterDataGrid"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:FilterDataGridDome"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    Background="{DynamicResource FBackground}"
+    Loaded="Window_Loaded"
+    mc:Ignorable="d">
+    <Grid>
+        <TabControl x:Name="Tcl_TabControl" SelectedIndex="0">
+            <TabItem Header="自动生成列">
+                <cos:FilterDataGrid
+                    x:Name="Fdg_AutoGenerateColumns"
+                    CanDragSum="True"
+                    CanUserGroup="True"
+                    FooterItems="{Binding FooterList}"
+                    HeadersVisibility="All"
+                    IsReadOnly="True"
+                    ItemsSource="{Binding DisplayEmployes, IsAsync=True}"
+                    ScrollViewer.CanContentScroll="True"
+                    SelectionUnit="Cell"
+                    ShowRowIndex="True"
+                    TotalFooterVisibility="Visible" />
+            </TabItem>
+            <TabItem Header="自定义列">
+                <cos:FilterDataGrid
+                    x:Name="DataGrid_CustomizeColumns"
+                    ApplyGlobalSearch="DataGrid_CustomizeColumns_GlobalSearch"
+                    AutoGenerateColumns="False"
+                    CanDragSum="True"
+                    CanUserGroup="True"
+                    CancelGlobalSearch="DataGrid_CustomizeColumns_CancelGlobalSearch"
+                    CustomizeRowHeaderWidth="80"
+                    GroupFormatString="yyyy-MM-dd"
+                    HeadersVisibility="All"
+                    IsReadOnly="True"
+                    ItemsSource="{Binding DisplayEmployes2, IsAsync=True}"
+                    PageBarVisibility="Visible"
+                    PageChanged="DataGrid_MainWindow_PageChanged"
+                    SelectionUnit="Cell"
+                    ShowRowIndex="True">
+                    <cos:FilterDataGrid.Columns>
+                        <cos:DataGridTextColumn
+                            Binding="{Binding FirstName}"
+                            FieldName="FirstName"
+                            Header="姓" />
+                        <cos:DataGridTextColumn
+                            Binding="{Binding LastName}"
+                            FieldName="LastName"
+                            Header="名" />
+                        <cos:DataGridCheckBoxColumn
+                            Binding="{Binding Manager}"
+                            FieldName="Manager"
+                            Header="管理员" />
+                        <cos:DataGridTextColumn
+                            Binding="{Binding Salary}"
+                            FieldName="Salary"
+                            Header="薪水" />
+                        <cos:DataGridTextColumn
+                            Binding="{Binding Age}"
+                            FieldName="Age"
+                            Header="年龄" />
+                        <cos:DataGridTextColumn
+                            Binding="{Binding StartDate}"
+                            FieldName="StartDate"
+                            Header="日期"
+                            IsColumnFiltered="False" />
+                        <cos:DataGridTemplateColumn Header="操作" IsReadOnly="True">
+                            <cos:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <DatePicker SelectedDate="{Binding StartDate}" />
+                                </DataTemplate>
+                            </cos:DataGridTemplateColumn.CellTemplate>
+                        </cos:DataGridTemplateColumn>
+                    </cos:FilterDataGrid.Columns>
+                </cos:FilterDataGrid>
+            </TabItem>
+
+            <TabItem Header="原生表格">
+                <DataGrid
+                    AutoGenerateColumns="False"
+                    IsReadOnly="True"
+                    ItemsSource="{Binding DisplayEmployes, IsAsync=True}"
+                    SelectionMode="Single"
+                    SelectionUnit="FullRow">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding FirstName}" Header="姓" />
+                        <DataGridTextColumn Binding="{Binding LastName}" Header="名" />
+                        <DataGridCheckBoxColumn Binding="{Binding Manager}" Header="管理员" />
+                        <cos:DataGridTextColumn
+                            Binding="{Binding Salary}"
+                            FieldName="Salary"
+                            Header="薪水" />
+                        <DataGridTextColumn Binding="{Binding Age}" Header="年龄" />
+                        <DataGridTextColumn Binding="{Binding StartDate}" Header="入取日期" />
+                        <DataGridTemplateColumn Header="操作">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+        </TabControl>
+        <Button
+            Margin="20"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Click="Button_Click" />
+        <Button
+            Margin="80,20"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Click="Button_Click_2" />
+    </Grid>
+</Window>

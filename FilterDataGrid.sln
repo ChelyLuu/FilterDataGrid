@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterDataGrid", "FilterDataGrid\FilterDataGrid.csproj", "{F7588E4A-EF46-4E6D-B44D-F523F823C98D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilterDataGrid.Core", "FilterDataGrid.Core\FilterDataGrid.Core.csproj", "{8210B187-D34D-4A64-B00D-D3C5A2A9654E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterDataGridDome", "FilterDataGridDome\FilterDataGridDome.csproj", "{01FF5B79-101D-408C-8CCB-BE6648CEBBEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7588E4A-EF46-4E6D-B44D-F523F823C98D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7588E4A-EF46-4E6D-B44D-F523F823C98D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7588E4A-EF46-4E6D-B44D-F523F823C98D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7588E4A-EF46-4E6D-B44D-F523F823C98D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8210B187-D34D-4A64-B00D-D3C5A2A9654E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8210B187-D34D-4A64-B00D-D3C5A2A9654E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8210B187-D34D-4A64-B00D-D3C5A2A9654E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8210B187-D34D-4A64-B00D-D3C5A2A9654E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01FF5B79-101D-408C-8CCB-BE6648CEBBEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01FF5B79-101D-408C-8CCB-BE6648CEBBEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01FF5B79-101D-408C-8CCB-BE6648CEBBEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01FF5B79-101D-408C-8CCB-BE6648CEBBEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64E90B0F-03B0-4712-A3B9-868D9811DED2}
+		RESX_NeutralResourcesLanguage = zh-CN
+	EndGlobalSection
+EndGlobal

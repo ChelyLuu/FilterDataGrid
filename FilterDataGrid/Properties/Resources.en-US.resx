@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="IsTrue" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="IsFalse" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Blank</value>
+  </data>
+  <data name="SearchWord" xml:space="preserve">
+    <value>Please enter the keyword you want to search</value>
+  </data>
+  <data name="ClearFilter" xml:space="preserve">
+    <value>Clear Filter</value>
+  </data>
+  <data name="Contains" xml:space="preserve">
+    <value>Search (included)</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>(Select All)</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="AscSort" xml:space="preserve">
+    <value>Ascending</value>
+  </data>
+  <data name="DescSort" xml:space="preserve">
+    <value>Descending</value>
+  </data>
+  <data name="ClearSort" xml:space="preserve">
+    <value>Clear sort</value>
+  </data>
+  <data name="ClearAllSort" xml:space="preserve">
+    <value>Clear all sorting</value>
+  </data>
+  <data name="CustomFilter" xml:space="preserve">
+    <value>Custom filter</value>
+  </data>
+  <data name="ClearCurrentFilter" xml:space="preserve">
+    <value>Clear current filter</value>
+  </data>
+  <data name="ClearAllFilter" xml:space="preserve">
+    <value>Clear all filters</value>
+  </data>
+  <data name="GroupColumn" xml:space="preserve">
+    <value>Group by column</value>
+  </data>
+  <data name="CancelGroup" xml:space="preserve">
+    <value>Ungroup</value>
+  </data>
+  <data name="SearchPanel" xml:space="preserve">
+    <value>Search Panel</value>
+  </data>
+  <data name="InterfaceSettings" xml:space="preserve">
+    <value>Layout Settings</value>
+  </data>
+  <data name="CloseSearchPanel" xml:space="preserve">
+    <value>Close the search panel</value>
+  </data>
+  <data name="ItemsInPage" xml:space="preserve">
+    <value>Per page</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="PrevPage" xml:space="preserve">
+    <value>Previous Page</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>GoToPage</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>Next Page</value>
+  </data>
+  <data name="EndPage" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="LayoutName" xml:space="preserve">
+    <value>Setting file name</value>
+  </data>
+  <data name="RowHeaderWidthAdjust" xml:space="preserve">
+    <value>Row Header Adjustment</value>
+  </data>
+  <data name="GroupHeightAdjust" xml:space="preserve">
+    <value>GroupRowHeight</value>
+  </data>
+  <data name="ColumnSelect" xml:space="preserve">
+    <value>Column Name</value>
+  </data>
+  <data name="ShowHideColumn" xml:space="preserve">
+    <value>Show/Hide Columns</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="LeftAlign" xml:space="preserve">
+    <value>LeftAlignment</value>
+  </data>
+  <data name="CenterAlign" xml:space="preserve">
+    <value>CentreAlignment</value>
+  </data>
+  <data name="RightAlign" xml:space="preserve">
+    <value>RightAlignment</value>
+  </data>
+  <data name="OtherSetting" xml:space="preserve">
+    <value>Other Settings</value>
+  </data>
+  <data name="ShowCenter" xml:space="preserve">
+    <value>Show all center</value>
+  </data>
+  <data name="InterlacedColor" xml:space="preserve">
+    <value>Interlace color change</value>
+  </data>
+  <data name="SaveLayout" xml:space="preserve">
+    <value>Save Layout</value>
+  </data>
+  <data name="ResetLayout" xml:space="preserve">
+    <value>Reset Layout</value>
+  </data>
+  <data name="RowHeightAdjust" xml:space="preserve">
+    <value>Row Height Adjustment</value>
+  </data>
+  <data name="ColumnWidthAdjust" xml:space="preserve">
+    <value>Column Width Adjustment</value>
+  </data>
+  <data name="Alignment" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="TitleBarAdjust" xml:space="preserve">
+    <value>Title Bar Adjustment</value>
+  </data>
+  <data name="ShowGlobalSearch" xml:space="preserve">
+    <value>Show global search by default</value>
+  </data>
+  <data name="SaveCompleted" xml:space="preserve">
+    <value>Saved!</value>
+  </data>
+  <data name="ResetCompleted" xml:space="preserve">
+    <value>Reset is completed!</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="ShowVerticalGridLine" xml:space="preserve">
+    <value>Show Vertical Gridlines</value>
+  </data>
+  <data name="ExpandedAllGroup" xml:space="preserve">
+    <value>Expand All</value>
+  </data>
+  <data name="CollapsedAllGroup" xml:space="preserve">
+    <value>Collapse All</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>and</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>OR</value>
+  </data>
+  <data name="Equal" xml:space="preserve">
+    <value>equal to</value>
+  </data>
+  <data name="UnEqual" xml:space="preserve">
+    <value>Not Equal to</value>
+  </data>
+  <data name="Contain" xml:space="preserve">
+    <value>Contain</value>
+  </data>
+  <data name="UnContain" xml:space="preserve">
+    <value>Noncontain</value>
+  </data>
+  <data name="StartWith" xml:space="preserve">
+    <value>StartWith</value>
+  </data>
+  <data name="EndWith" xml:space="preserve">
+    <value>EndWith</value>
+  </data>
+  <data name="Null" xml:space="preserve">
+    <value>Is null</value>
+  </data>
+  <data name="UnNull" xml:space="preserve">
+    <value>is not empty</value>
+  </data>
+  <data name="Greater" xml:space="preserve">
+    <value>Greater than</value>
+  </data>
+  <data name="GreaterEqual" xml:space="preserve">
+    <value>Greater than or equal to</value>
+  </data>
+  <data name="Less" xml:space="preserve">
+    <value>Less</value>
+  </data>
+  <data name="LessEqual" xml:space="preserve">
+    <value>Less than or equal to</value>
+  </data>
+  <data name="AddCondition" xml:space="preserve">
+    <value>Add condition</value>
+  </data>
+  <data name="DeleteCondition" xml:space="preserve">
+    <value>Delete Condition</value>
+  </data>
+  <data name="ClearCondition" xml:space="preserve">
+    <value>Clear Conditions</value>
+  </data>
+  <data name="ApplyFilter" xml:space="preserve">
+    <value>Apply Filters</value>
+  </data>
+  <data name="CustomizeFilterTip" xml:space="preserve">
+    <value>Please perfect the filter conditions!</value>
+  </data>
+  <data name="ExportTip" xml:space="preserve">
+    <value>A total of [{0}] items of data were exported this time.</value>
+  </data>
+  <data name="Sum" xml:space="preserve">
+    <value>Sum:</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Count:</value>
+  </data>
+</root>

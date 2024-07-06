@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="IsTrue" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="IsFalse" xml:space="preserve">
+    <value>待ってください</value>
+  </data>
+  <data name="SearchWord" xml:space="preserve">
+    <value>検索するキーワードを入力してください</value>
+  </data>
+  <data name="ClearFilter" xml:space="preserve">
+    <value>フィルターを解除</value>
+  </data>
+  <data name="Contains" xml:space="preserve">
+    <value>セットを含めて検索する</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>（すべて選択）</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="ClearSort" xml:space="preserve">
+    <value>並べ替えをクリア</value>
+  </data>
+  <data name="ClearAllSort" xml:space="preserve">
+    <value>すべての並べ替えをクリア</value>
+  </data>
+  <data name="CustomFilter" xml:space="preserve">
+    <value>カスタムフィルタ</value>
+  </data>
+  <data name="ClearCurrentFilter" xml:space="preserve">
+    <value>現在のフィルターをクリア</value>
+  </data>
+  <data name="ClearAllFilter" xml:space="preserve">
+    <value>すべての絞り込みをクリア</value>
+  </data>
+  <data name="GroupColumn" xml:space="preserve">
+    <value>列でグループ化</value>
+  </data>
+  <data name="CancelGroup" xml:space="preserve">
+    <value>グループ解除</value>
+  </data>
+  <data name="SearchPanel" xml:space="preserve">
+    <value>検索パネル</value>
+  </data>
+  <data name="InterfaceSettings" xml:space="preserve">
+    <value>レイアウト設定</value>
+  </data>
+  <data name="CloseSearchPanel" xml:space="preserve">
+    <value>検索パネルを閉じます</value>
+  </data>
+  <data name="ItemsInPage" xml:space="preserve">
+    <value>ページごと</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>ホーム</value>
+  </data>
+  <data name="PrevPage" xml:space="preserve">
+    <value>前のページ</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>GoToPage</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>次のページ</value>
+  </data>
+  <data name="LayoutName" xml:space="preserve">
+    <value>設定ファイル</value>
+  </data>
+  <data name="RowHeightAdjust" xml:space="preserve">
+    <value>高さ調節</value>
+  </data>
+  <data name="RowHeaderWidthAdjust" xml:space="preserve">
+    <value>行ヘッダーの調整</value>
+  </data>
+  <data name="ShowHideColumn" xml:space="preserve">
+    <value>列の表示/非表示</value>
+  </data>
+  <data name="ColumnWidthAdjust" xml:space="preserve">
+    <value>列の幅調整</value>
+  </data>
+  <data name="Alignment" xml:space="preserve">
+    <value>アライメント</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>デフォルト</value>
+  </data>
+  <data name="OtherSetting" xml:space="preserve">
+    <value>その他の設定</value>
+  </data>
+  <data name="ShowCenter" xml:space="preserve">
+    <value>すべて中央に表示</value>
+  </data>
+  <data name="InterlacedColor" xml:space="preserve">
+    <value>インターレースの色が変わります</value>
+  </data>
+  <data name="SaveLayout" xml:space="preserve">
+    <value>レイアウトを保存</value>
+  </data>
+  <data name="ResetLayout" xml:space="preserve">
+    <value>レイアウトをリセット</value>
+  </data>
+  <data name="TitleBarAdjust" xml:space="preserve">
+    <value>タイトルバーの調整</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>区切り</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="AscSort" xml:space="preserve">
+    <value>昇順に並べ替え</value>
+  </data>
+  <data name="DescSort" xml:space="preserve">
+    <value>降順に並べ替え</value>
+  </data>
+  <data name="EndPage" xml:space="preserve">
+    <value>最後です</value>
+  </data>
+  <data name="GroupHeightAdjust" xml:space="preserve">
+    <value>グループ化された行の高さ</value>
+  </data>
+  <data name="ColumnSelect" xml:space="preserve">
+    <value>列名の選択</value>
+  </data>
+  <data name="LeftAlign" xml:space="preserve">
+    <value>左</value>
+  </data>
+  <data name="CenterAlign" xml:space="preserve">
+    <value>中央</value>
+  </data>
+  <data name="RightAlign" xml:space="preserve">
+    <value>右揃え</value>
+  </data>
+  <data name="ShowGlobalSearch" xml:space="preserve">
+    <value>デフォルトでグローバル検索を表示</value>
+  </data>
+  <data name="SaveCompleted" xml:space="preserve">
+    <value>保存しました！</value>
+  </data>
+  <data name="ResetCompleted" xml:space="preserve">
+    <value>リセットが完了しました！</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>スティッキー</value>
+  </data>
+  <data name="ShowVerticalGridLine" xml:space="preserve">
+    <value>垂直グリッド線を表示</value>
+  </data>
+  <data name="ExpandedAllGroup" xml:space="preserve">
+    <value>すべて展開</value>
+  </data>
+  <data name="CollapsedAllGroup" xml:space="preserve">
+    <value>すべて崩壊しました</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>と</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>あるいは</value>
+  </data>
+  <data name="Equal" xml:space="preserve">
+    <value>等式</value>
+  </data>
+  <data name="UnEqual" xml:space="preserve">
+    <value>ノットイコール</value>
+  </data>
+  <data name="Contain" xml:space="preserve">
+    <value>含まれる</value>
+  </data>
+  <data name="UnContain" xml:space="preserve">
+    <value>含まない</value>
+  </data>
+  <data name="StartWith" xml:space="preserve">
+    <value>始めましょう</value>
+  </data>
+  <data name="EndWith" xml:space="preserve">
+    <value>終了</value>
+  </data>
+  <data name="Null" xml:space="preserve">
+    <value>空っぽ</value>
+  </data>
+  <data name="UnNull" xml:space="preserve">
+    <value>は空ではありません</value>
+  </data>
+  <data name="Greater" xml:space="preserve">
+    <value>不等式</value>
+  </data>
+  <data name="GreaterEqual" xml:space="preserve">
+    <value>以上</value>
+  </data>
+  <data name="Less" xml:space="preserve">
+    <value>不等式</value>
+  </data>
+  <data name="LessEqual" xml:space="preserve">
+    <value>以下</value>
+  </data>
+  <data name="AddCondition" xml:space="preserve">
+    <value>条件を追加</value>
+  </data>
+  <data name="DeleteCondition" xml:space="preserve">
+    <value>条件を削除</value>
+  </data>
+  <data name="ClearCondition" xml:space="preserve">
+    <value>条件をクリア</value>
+  </data>
+  <data name="ApplyFilter" xml:space="preserve">
+    <value>フィルターを適用してください</value>
+  </data>
+  <data name="CustomizeFilterTip" xml:space="preserve">
+    <value>フィルター条件を完璧にしてください！</value>
+  </data>
+  <data name="ExportTip" xml:space="preserve">
+    <value>今回は合計[{0}]件のデータがエクスポートされました。</value>
+  </data>
+  <data name="Sum" xml:space="preserve">
+    <value>合計:</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>数える:</value>
+  </data>
+</root>

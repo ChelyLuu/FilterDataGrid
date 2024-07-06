@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="IsTrue" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="IsFalse" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>空白</value>
+  </data>
+  <data name="SearchWord" xml:space="preserve">
+    <value>請輸入需要搜尋的關鍵字</value>
+  </data>
+  <data name="ClearFilter" xml:space="preserve">
+    <value>清除過濾器</value>
+  </data>
+  <data name="Contains" xml:space="preserve">
+    <value>搜尋(包含)</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>全選</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>確定</value>
+  </data>
+  <data name="AscSort" xml:space="preserve">
+    <value>升序排序</value>
+  </data>
+  <data name="DescSort" xml:space="preserve">
+    <value>降序排序</value>
+  </data>
+  <data name="ClearSort" xml:space="preserve">
+    <value>清除排序</value>
+  </data>
+  <data name="ClearAllSort" xml:space="preserve">
+    <value>清除所有排序</value>
+  </data>
+  <data name="CustomFilter" xml:space="preserve">
+    <value>自訂篩選</value>
+  </data>
+  <data name="ClearCurrentFilter" xml:space="preserve">
+    <value>清除目前篩選</value>
+  </data>
+  <data name="ClearAllFilter" xml:space="preserve">
+    <value>清除所有篩選</value>
+  </data>
+  <data name="GroupColumn" xml:space="preserve">
+    <value>此列分組</value>
+  </data>
+  <data name="CancelGroup" xml:space="preserve">
+    <value>取消分組</value>
+  </data>
+  <data name="SearchPanel" xml:space="preserve">
+    <value>搜尋面板</value>
+  </data>
+  <data name="InterfaceSettings" xml:space="preserve">
+    <value>介面設定</value>
+  </data>
+  <data name="CloseSearchPanel" xml:space="preserve">
+    <value>關閉搜尋面板</value>
+  </data>
+  <data name="ItemsInPage" xml:space="preserve">
+    <value>每頁顯示的數量</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>首頁</value>
+  </data>
+  <data name="PrevPage" xml:space="preserve">
+    <value>上一頁</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>跳轉</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>下一頁</value>
+  </data>
+  <data name="EndPage" xml:space="preserve">
+    <value>尾頁</value>
+  </data>
+  <data name="LayoutName" xml:space="preserve">
+    <value>設定檔名</value>
+  </data>
+  <data name="RowHeightAdjust" xml:space="preserve">
+    <value>行高調整</value>
+  </data>
+  <data name="RowHeaderWidthAdjust" xml:space="preserve">
+    <value>行頭調整</value>
+  </data>
+  <data name="GroupHeightAdjust" xml:space="preserve">
+    <value>分組行高</value>
+  </data>
+  <data name="ColumnSelect" xml:space="preserve">
+    <value>列名選擇</value>
+  </data>
+  <data name="ShowHideColumn" xml:space="preserve">
+    <value>顯示/隱藏列</value>
+  </data>
+  <data name="ColumnWidthAdjust" xml:space="preserve">
+    <value>列寬調整</value>
+  </data>
+  <data name="Alignment" xml:space="preserve">
+    <value>對齊方式</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>預設</value>
+  </data>
+  <data name="LeftAlign" xml:space="preserve">
+    <value>居左</value>
+  </data>
+  <data name="CenterAlign" xml:space="preserve">
+    <value>居中</value>
+  </data>
+  <data name="RightAlign" xml:space="preserve">
+    <value>居右</value>
+  </data>
+  <data name="OtherSetting" xml:space="preserve">
+    <value>其它設定</value>
+  </data>
+  <data name="ShowCenter" xml:space="preserve">
+    <value>全部居中顯示</value>
+  </data>
+  <data name="InterlacedColor" xml:space="preserve">
+    <value>隔行換色</value>
+  </data>
+  <data name="SaveLayout" xml:space="preserve">
+    <value>儲存佈局</value>
+  </data>
+  <data name="ResetLayout" xml:space="preserve">
+    <value>重置佈局</value>
+  </data>
+  <data name="TitleBarAdjust" xml:space="preserve">
+    <value>標題列調整</value>
+  </data>
+  <data name="ShowGlobalSearch" xml:space="preserve">
+    <value>預設顯示全域搜尋</value>
+  </data>
+  <data name="SaveCompleted" xml:space="preserve">
+    <value>儲存完成！</value>
+  </data>
+  <data name="ResetCompleted" xml:space="preserve">
+    <value>重置完成！</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>關閉</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>置頂</value>
+  </data>
+  <data name="ShowVerticalGridLine" xml:space="preserve">
+    <value>顯示垂直網格線</value>
+  </data>
+  <data name="ExpandedAllGroup" xml:space="preserve">
+    <value>全部展開</value>
+  </data>
+  <data name="CollapsedAllGroup" xml:space="preserve">
+    <value>全部收合</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>與</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>或</value>
+  </data>
+  <data name="Equal" xml:space="preserve">
+    <value>等於</value>
+  </data>
+  <data name="UnEqual" xml:space="preserve">
+    <value>不等於</value>
+  </data>
+  <data name="Contain" xml:space="preserve">
+    <value>包含</value>
+  </data>
+  <data name="UnContain" xml:space="preserve">
+    <value>不包含</value>
+  </data>
+  <data name="StartWith" xml:space="preserve">
+    <value>開頭</value>
+  </data>
+  <data name="EndWith" xml:space="preserve">
+    <value>結尾</value>
+  </data>
+  <data name="Null" xml:space="preserve">
+    <value>為空</value>
+  </data>
+  <data name="UnNull" xml:space="preserve">
+    <value>不為空</value>
+  </data>
+  <data name="Greater" xml:space="preserve">
+    <value>大於</value>
+  </data>
+  <data name="GreaterEqual" xml:space="preserve">
+    <value>大於等於</value>
+  </data>
+  <data name="Less" xml:space="preserve">
+    <value>小於</value>
+  </data>
+  <data name="LessEqual" xml:space="preserve">
+    <value>小於等於</value>
+  </data>
+  <data name="AddCondition" xml:space="preserve">
+    <value>新增條件</value>
+  </data>
+  <data name="DeleteCondition" xml:space="preserve">
+    <value>刪除條件</value>
+  </data>
+  <data name="ClearCondition" xml:space="preserve">
+    <value>清空條件</value>
+  </data>
+  <data name="ApplyFilter" xml:space="preserve">
+    <value>應用篩選</value>
+  </data>
+  <data name="CustomizeFilterTip" xml:space="preserve">
+    <value>請完善過濾條件！</value>
+  </data>
+  <data name="ExportTip" xml:space="preserve">
+    <value>本次共導出資料【{0}】條。</value>
+  </data>
+  <data name="Sum" xml:space="preserve">
+    <value>求和：</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>計數：</value>
+  </data>
+</root>
