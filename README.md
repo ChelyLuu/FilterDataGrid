@@ -31,11 +31,9 @@
    
  <Window . . .
  
-       xmlns:filterDG="clr-namespace:FilterDataGrid;assembly=FilterDataGrid"
+    xmlns:filterDG="clr-namespace:FilterDataGrid;assembly=FilterDataGrid"
        
-    <Grid>
- 
-    </Grid>
+    <Grid/>
     
 </Window>
 
