@@ -4,6 +4,7 @@
     xmlns:local="clr-namespace:FilterDataGrid">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/FilterDataGrid;component/Themes/FilterDataGrid.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/FilterDataGrid;component/Themes/ControlsStyle.xaml" />
     </ResourceDictionary.MergedDictionaries>
+
+   
 </ResourceDictionary>
