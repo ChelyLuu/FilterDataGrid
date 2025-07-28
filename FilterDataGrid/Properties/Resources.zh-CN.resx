@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,16 +112,16 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="IsTrue" xml:space="preserve">
-    <value>是</value>
-  </data>
   <data name="IsFalse" xml:space="preserve">
     <value>否</value>
+  </data>
+  <data name="IsTrue" xml:space="preserve">
+    <value>是</value>
   </data>
   <data name="Empty" xml:space="preserve">
     <value>空白</value>
@@ -195,11 +198,11 @@
   <data name="EndPage" xml:space="preserve">
     <value>尾页</value>
   </data>
-  <data name="LayoutName" xml:space="preserve">
-    <value>设置文件名</value>
+  <data name="ResetLayout" xml:space="preserve">
+    <value>重置布局</value>
   </data>
-  <data name="RowHeightAdjust" xml:space="preserve">
-    <value>行高调整</value>
+  <data name="SaveLayout" xml:space="preserve">
+    <value>保存布局</value>
   </data>
   <data name="RowHeaderWidthAdjust" xml:space="preserve">
     <value>行头调整</value>
@@ -213,17 +216,8 @@
   <data name="ShowHideColumn" xml:space="preserve">
     <value>显示/隐藏列</value>
   </data>
-  <data name="ColumnWidthAdjust" xml:space="preserve">
-    <value>列宽调整</value>
-  </data>
-  <data name="Alignment" xml:space="preserve">
-    <value>对齐方式</value>
-  </data>
   <data name="Default" xml:space="preserve">
     <value>默认</value>
-  </data>
-  <data name="LeftAlign" xml:space="preserve">
-    <value>居左</value>
   </data>
   <data name="CenterAlign" xml:space="preserve">
     <value>居中</value>
@@ -240,14 +234,23 @@
   <data name="InterlacedColor" xml:space="preserve">
     <value>隔行换色</value>
   </data>
-  <data name="SaveLayout" xml:space="preserve">
-    <value>保存布局</value>
+  <data name="LeftAlign" xml:space="preserve">
+    <value>居左</value>
   </data>
-  <data name="ResetLayout" xml:space="preserve">
-    <value>重置布局</value>
+  <data name="LayoutName" xml:space="preserve">
+    <value>设置文件名</value>
+  </data>
+  <data name="ColumnWidthAdjust" xml:space="preserve">
+    <value>列宽调整</value>
   </data>
   <data name="TitleBarAdjust" xml:space="preserve">
     <value>标题栏调整</value>
+  </data>
+  <data name="Alignment" xml:space="preserve">
+    <value>对齐方式</value>
+  </data>
+  <data name="RowHeightAdjust" xml:space="preserve">
+    <value>行高调整</value>
   </data>
   <data name="ShowGlobalSearch" xml:space="preserve">
     <value>默认显示全局搜索</value>
