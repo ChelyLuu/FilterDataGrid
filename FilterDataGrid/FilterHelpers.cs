@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
+using System.Windows.Data;
 using System.Windows.Media;
 
 namespace FilterDataGrid
@@ -462,12 +463,107 @@ namespace FilterDataGrid
 
         public string FormatString { get; set; }
 
-        public totalType TotalType { get; set; }
+        public TotalType TotalType { get; set; }
 
     }
 
-    public enum totalType
+    public enum TotalType
     {
         Sum, Ave, Count
     };
+
+    public class ColumnProperty
+    {
+        public string Name { get; set; }
+
+        public string FieldName { get; set; }
+
+        public int Index { get; set; }
+
+        public double Columnwidth { get; set; }
+
+        public Visibility Visibility { get; set; }
+
+        public Type ColumnType { get; set; }
+
+        public string Alignment { get; set; }
+
+        public string ColumnSort { get; set; }
+
+    }
+
+    public class GroupSortItem
+    {
+        public string FieldName { get; set; }
+
+        public ListSortDirection SortDirection { get; set; }
+
+        public static ListSortDirection StringToSortDirdection(string sortString)
+        {
+            if (sortString == "Ascending")
+            {
+                return ListSortDirection.Ascending;
+            }
+            else
+            {
+                return ListSortDirection.Descending;
+            }
+        }
+    }
+
+
+    public class Pager
+    {
+        private readonly CollectionView _view;
+        private readonly int _pageSize;
+        private int _currentPage;
+        public Pager(CollectionView view, int pageSize)
+        {
+            _view = view;
+            _pageSize = pageSize;
+            _currentPage = 1;
+            _view.Filter = FilterMethod;
+        }
+
+        public ICollectionView View => _view;
+        public void MoveToPage(int page)
+        {
+            if (page < 1 || page > PageCount)
+                return;
+            _currentPage = page;
+            _view.Refresh();
+        }
+        public bool FilterMethod(object obj)
+        {
+            var index = _view.IndexOf(obj);
+            return index >= (_currentPage - 1) * _pageSize && index < _currentPage * _pageSize;
+        }
+
+        public int PageCount => (int)Math.Ceiling((double)_view.Count / _pageSize);
+        public int CurrentPage => _currentPage;
+    }
+
+    public class CustomizeFilter
+    {
+        public bool EnableAO { get; set; }
+        public string AndOr { get; set; }
+        public CustomizeFilterColumn ColumnsList { get; set; }
+        public string OperatorID { get; set; }
+        public string Operator { get; set; }
+        public string Condition { get; set; }
+    }
+
+    public class CustomizeFilterColumn
+    {
+        public string Header { get; set; }
+        public string FieldName { get; set; }
+        public Type ColumnType { get; set; }
+    }
+
+    public class OperatorString
+    {
+        public string ID { get; set; }
+        public string IcoText { get; set; }
+        public string OperatorText { get; set; }
+    }
 }

@@ -40,7 +40,6 @@ namespace FilterDataGrid
 
         public HashSet<object> PreviouslyFilteredItems { get; set; }
 
-        public Loc Translate { get; set; }
 
         #endregion Public Properties
 
