@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
-using System.Reflection;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 
-namespace FilterDataGridDemo
+namespace FilterDataGridDome
 {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
@@ -18,134 +18,57 @@ namespace FilterDataGridDemo
         public MainWindow()
         {
             InitializeComponent();
-             this.DataContext = this;
-        }
-        public ObservableCollection<Student> dvList { get; set; }
-        public List<FooterItem> footerList { get; set; }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            DataTable dt = new DataTable();
-            dt.Columns.Add("name");
-            dt.Columns.Add("age", typeof(int));
-            dt.Columns.Add("birthdate", typeof(DateTime));
-            dt.Columns.Add("phone");
-            dt.Columns.Add("address");
-            dt.Columns.Add("marry", typeof(bool));
-            dt.Columns.Add("good", typeof(bool));
-            dt.Columns.Add("score", typeof(double));
-            dt.Columns.Add("remark");
-
-
-            dt.Rows.Add("张三", "19", "2004-10-19", "18617082298", "安徽安庆", false, true, 89);
-            dt.Rows.Add("李四", "20", "2003-6-10", "18617081238", "安徽芜湖", false, false, 90);
-            dt.Rows.Add("王五", "19", "2004-8-19", "18617083567", "广东深圳", false, false, 87);
-            dt.Rows.Add("王小红", "18", "2005-7-10", "18617087656", "广东广州", false, true, 88);
-            dt.Rows.Add("朱小倩", "17", "2006-9-6", "18617087899", "安徽安庆", false, true, 90);
-            dt.Rows.Add("黄先生", "21", "2002-10-8", "18617088766", "广东惠州", false, true, 85);
-            dt.Rows.Add("李小姐", "19", "2004-3-17", "18617088765", "安徽安庆", false, false, 88);
-            dt.Rows.Add("曾小贤", "26", "1992-6-22", "18617089088", "安徽安庆", true, true, 91.786);
-            dt.Rows.Add("胡一菲", "20", "2004-7-5", "18617081272", "安徽合肥", false, true, 90);
-            dt.Rows.Add("林婉如", "23", "2001-3-6", "18617081236", "安徽芜湖", true, true, 86);
-
-            footerList = new List<FooterItem>()
-            {
-                new FooterItem() {  FieldName = "Score", TotalType=totalType.Ave, FormatString = "平均：0.00" }
-                //new FooterItem() {  FieldName = "Good", TotalType=totalType.Sum }
-            };
-            OnPropertyChanged("footerList");
-
-            this.dvList = ToObservableCollection<Student>(dt);
-            OnPropertyChanged("dvList");
-
-            DataGrid.ItemsSource = dt.DefaultView;
+            this.DataContext = this;
 
         }
 
 
+        public ObservableCollection<Employe> Employes { get; set; }
 
-        public ObservableCollection<T> ToObservableCollection<T>(DataTable dt) where T : class, new()
+        public ObservableCollection<Employe> DisplayEmployes { get; set; }
+
+        public ObservableCollection<Employe> Employes2 { get; set; }
+        public ObservableCollection<Employe> DisplayEmployes2 { get; set; }
+        public IEnumerable<Employe> PageEmployes { get; set; }
+
+        public List<FooterItem> FooterList { get; set; } = new List<FooterItem>()
         {
-            Type t = typeof(T);
-            PropertyInfo[] propertys = t.GetProperties();
-            ObservableCollection<T> lst = new ObservableCollection<T>();
-            string typeName = string.Empty;
-            foreach (DataRow dr in dt.Rows)
+            new FooterItem()
             {
-                T entity = new T();
-                foreach (PropertyInfo pi in propertys)
-                {
-                    typeName = pi.Name;
-                    if (dt.Columns.Contains(typeName))
-                    {
-                        if (!pi.CanWrite) continue;
-                        object value = dr[typeName];
-                        if (value == DBNull.Value) continue;
-                        if (pi.PropertyType == typeof(string))
-                        {
-                            pi.SetValue(entity, value.ToString(), null);
-                        }
-                        else if (pi.PropertyType == typeof(int) || pi.PropertyType == typeof(int?))
-                        {
-                            pi.SetValue(entity, int.Parse(value.ToString()), null);
-                        }
-                        else if (pi.PropertyType == typeof(DateTime?) || pi.PropertyType == typeof(DateTime))
-                        {
-                            pi.SetValue(entity, DateTime.Parse(value.ToString()), null);
-                        }
-                        else if (pi.PropertyType == typeof(float))
-                        {
-                            pi.SetValue(entity, float.Parse(value.ToString()), null);
-                        }
-                        else if (pi.PropertyType == typeof(double))
-                        {
-                            pi.SetValue(entity, double.Parse(value.ToString()), null);
-                        }
-                        else
-                        {
-                            pi.SetValue(entity, value, null);
-                        }
-                    }
-                }
-                lst.Add(entity);
+                FieldName = "Age", TotalType = TotalType.Ave, FormatString = "Age:0.00"
+            } ,
+            new FooterItem()
+            {
+                FieldName = "Salary", TotalType = TotalType.Sum, FormatString = "Salary:0"
+            }  ,
+            new FooterItem()
+            {
+                FieldName = "LastName", TotalType = TotalType.Count, FormatString = "LastName:0"
             }
-            return lst;
-        }
+        };
+        public List<string> DefaultGroup { get; set; } = new List<string>() { "StartDate" };
 
-        public static List<T> TableToListModel<T>(DataTable dt) where T : new()
+        private async void FillData()
         {
-            // 定义集合    
-            List<T> ts = new List<T>();
 
-            // 获得此模型的类型   
-            Type type = typeof(T);
-            string tempName = "";
+            int count = 1000;
+            var employe = new List<Employe>(count);
 
-            foreach (DataRow dr in dt.Rows)
+            // for distinct lastname set "true" at CreateRandomEmployee(true)
+            await Task.Run(() =>
             {
-                T t = new T();
-                // 获得此模型的公共属性      
-                PropertyInfo[] propertys = t.GetType().GetProperties();
-                foreach (PropertyInfo pi in propertys)
-                {
-                    tempName = pi.Name;  // 检查DataTable是否包含此列    
 
-                    if (dt.Columns.Contains(tempName))
-                    {
-                        // 判断此属性是否有Setter      
-                        if (!pi.CanWrite) continue;
+                for (var i = 0; i < count; i++)
+                    Employes.Add(RandomGenerator.CreateRandomEmployee(true));
+            });
+            DisplayEmployes = new ObservableCollection<Employe>(Employes);
+            PageEmployes = Employes2 = new ObservableCollection<Employe>(Employes);
+            DisplayEmployes2 = new ObservableCollection<Employe>(DataGrid_CustomizeColumns.PageInitialized(Employes2));
+            OnPropertyChanged("DisplayEmployes");
+            OnPropertyChanged("DisplayEmployes2");
 
-                        object value = dr[tempName];
-                        if (value != DBNull.Value)
-                            pi.SetValue(t, value, null);
-                    }
-                }
-                ts.Add(t);
-            }
-            return ts;
+
         }
-
-
 
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -153,17 +76,108 @@ namespace FilterDataGridDemo
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Employes = new ObservableCollection<Employe>();
+            FillData();
+        }
+
+        private void DataGrid_MainWindow_PageChanged(object sender, RoutedEventArgs e)
+        {
+
+            DisplayEmployes2 = new ObservableCollection<Employe>(DataGrid_CustomizeColumns.PageSwitched(PageEmployes));
+            OnPropertyChanged("DisplayEmployes2");
+        }
+
+        private void DataGrid_CustomizeColumns_GlobalSearch(object sender, RoutedEventArgs e)
+        {
+            FilterDataGrid.FilterDataGrid filterDataGrid = e.OriginalSource as FilterDataGrid.FilterDataGrid;
+            string hiText = filterDataGrid.HiText;
+
+            if (string.IsNullOrEmpty(hiText)) return;
+
+            PageEmployes = Employes2.Where(x => x.FirstName.Contains(hiText) || x.LastName.Contains(hiText) ||
+           x.Salary.ToString().Contains(hiText) || x.Age.ToString().Contains(hiText) || x.StartDate.ToString().Contains(hiText));
+            //PageEmployes = filterDataGrid.PageFilter<Employe>(Employes2);
+
+
+            DisplayEmployes2 = new ObservableCollection<Employe>(DataGrid_CustomizeColumns.PageInitialized(PageEmployes));
+
+            OnPropertyChanged("DisplayEmployes2");
+
+        }
+
+        private void DataGrid_CustomizeColumns_CancelGlobalSearch(object sender, RoutedEventArgs e)
+        {
+
+            PageEmployes = DisplayEmployes2 = new ObservableCollection<Employe>(DataGrid_CustomizeColumns.PageInitialized(Employes2));
+
+            OnPropertyChanged("DisplayEmployes2");
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DisplayEmployes.Add(RandomGenerator.CreateRandomEmployee(true));
+            //Fdg_AutoGenerateColumns.ExportToExcel("AutoGenerateColumns");
+            //Console.WriteLine(DataGrid_AutoGenerateColumn.CurrentCell.Item.ToString());
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            DataGrid_CustomizeColumns.ExportToExcel("CustomizeColumns");
+        }
+
+        private void Fdg_AutoGenerateColumns_SelectedCellsChanged(object sender, System.Windows.Controls.SelectedCellsChangedEventArgs e)
+        {
+            //foreach (DataGridCellInfo item in Fdg_AutoGenerateColumns.SelectedCells)
+            //{
+            //    Employe employe = (Employe)item.Item;
+            //    Console.WriteLine(employe.Age);
+            //}   
+            //ObservableCollection<Employe> employes= new ObservableCollection<Employe>(  Fdg_AutoGenerateColumns.SelectedItems);
+            //DataGridCellInfo[] items = (DataGridCellInfo[])(Fdg_AutoGenerateColumns.SelectedCells.ToArray());
+            //foreach (var item in items)
+            //{
+
+            //    TextBlock str = ((TextBlock)item.Column.GetCellContent(item.Item));
+            //    Console.WriteLine(str.GetValue(str));
+            //}
+            //items.Sum(x =>x.Column);
+            //List<Employe> employes=Fdg_AutoGenerateColumns.SelectedCells as List<Employe>;
+            //Console.WriteLine(employes.Count);
+        }
     }
 
-    public class Student
+    public class Employe
     {
-        public string Name { get; set; }
+        #region Public Constructors
+
+        public Employe(string lastName, string firstName, double? salary, int? age, DateTime? startDate,
+            bool? manager = false)
+        {
+            LastName = lastName;
+            FirstName = firstName;
+            Salary = salary;
+            Age = age;
+            StartDate = startDate;
+            Manager = manager;
+        }
+
+        #endregion Public Constructors
+
+        #region Public Properties
+
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public bool? Manager { get; set; }
+        public double? Salary { get; set; }
         public int? Age { get; set; }
-        public bool Marry { get; set; }
-        public bool Good { get; set; }
-        public string Phone { get; set; }
-        public string Address { get; set; }
-        public DateTime? Birthdate { get; set; }
-        public double Score { get; set; }
+        public DateTime? StartDate { get; set; }
+
+        #endregion Public Properties
     }
+
+
 }

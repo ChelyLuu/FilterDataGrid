@@ -1,24 +1,21 @@
-﻿<Application x:Class="FilterDataGridDemo.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:FilterDataGridDemo"
-              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             StartupUri="MainWindow.xaml">
+﻿<Application
+    x:Class="FilterDataGridDome.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:FilterDataGridDome"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-
                 <materialDesign:BundledTheme
-                    BaseTheme="Light"
-                    PrimaryColor="Blue"
+                    BaseTheme="Dark"
+                    PrimaryColor="Red"
                     SecondaryColor="Lime" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
-
-                <!--  Other merged dictionaries here  -->
                 <ResourceDictionary Source="pack://application:,,,/FilterDataGrid;component/Themes/Generic.xaml" />
-
             </ResourceDictionary.MergedDictionaries>
-            <!--  Other app resources here  -->
         </ResourceDictionary>
+
     </Application.Resources>
 </Application>
